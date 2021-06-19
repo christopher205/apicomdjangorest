@@ -6,3 +6,8 @@ Serializer - Ele faz a 'conversão' do objeto python que está vindo do banco de
 #Passo 4 - registrar no urls.py a minha rota para ele poder 'saber' pra onde ir.
 
 Criar autenticação - 
+
+# Passo 1 - instalar a lib djangorestframework-simplejwt
+#Passo 2 - configurar uma sessão no settings.py passando o nome do token
+Passo 3 - ir no urls.py, importar as libs, declarar os paths no urls patterns
+Passo 4 - ir no views.py e declarar uma variavel chamando a classe isAuthenticated
