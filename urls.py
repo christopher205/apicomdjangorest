@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 from apis.views import CelularViewSet
 from rest_framework import routers
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+
 
 rotas = routers.DefaultRouter()
 rotas.register(r'Celular', CelularViewSet)
@@ -25,4 +27,7 @@ rotas.register(r'Celular', CelularViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(rotas.urls)),
+    path('token/', TokenObtainPairView.as_view()),
+    path('token/refresh', TokenRefreshView.as_view())
+
 ]
